@@ -1,0 +1,313 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #4e9a2d;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul{
+    display:none;
+}
+section {
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+    transition: opacity 0.5s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button.toggle-details {
+    background-color: #4e9a2d;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.toggle-details:hover {
+    background-color: #376f1f;
+}
+
+.courses {
+    margin-top: 15px;
+}
+
+.skill-bar {
+    margin-bottom: 20px;
+}
+
+.skill-bar label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #007bff;
+}
+
+.project-item {
+    margin-bottom: 20px;
+}
+
+.project-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project-item a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Scroll Animations */
+.skills .progress-bar,
+.projects .project-item {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+
+.skills .progress-bar.visible,
+.projects .project-item.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+/* Basic styles for Contact Section */
+.contact-section {
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.contact-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4e9a2d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #376f1f;
+}
+
+.form-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+#skills {
+    padding: 20px;
+}
+
+.skill-bar {
+    margin-bottom: 20px;
+}
+
+.skill-bar label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    height: 20px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0%; /* Start at 0% */
+    background-color: #007bff; /* Change color as needed */
+    border-radius: 5px;
+    animation-duration: 2s; /* Duration for animation */
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; /* Keep the final state after animation */
+}
+
+/* Keyframes for each progress bar */
+.html {
+    animation-name: htmlAnimation;
+}
+
+.css {
+    animation-name: cssAnimation;
+}
+
+.js {
+    animation-name: jsAnimation;
+}
+
+.jq {
+    animation-name: jqAnimation;
+}
+
+/* Define keyframes for each skill */
+@keyframes htmlAnimation {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes cssAnimation {
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes jsAnimation {
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes jqAnimation {
+    to {
+        width: 80%;
+    }
+}
+/* Define default (light mode) styles */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --header-bg-color: #4e9a2d;
+    --button-bg-color: #4e9a2d;
+    --button-hover-bg-color: #376f1f;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    --bg-color: #333;
+    --text-color: #f4f4f4;
+    --header-bg-color: #1a2e1f;
+    --button-bg-color: #007bff;
+    --button-hover-bg-color: #0056b3;
+    --link-color: #4e9a2d;
+    --link-hover-color: #376f1f;
+}
+
+/* Apply the light or dark mode styles globally */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--header-bg-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+button {
+    background-color: var(--button-bg-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/* The rest of your CSS styles remain unchanged... */
+/* Add a smooth transition effect when switching modes */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}

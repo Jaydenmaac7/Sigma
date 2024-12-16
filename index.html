@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayden's Carrer Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="animations" href="scripts.js">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en', // Set your original page language (English in this case)
+            includedLanguages: 'en,es,zh-CN,tl,vi', // Include English, Spanish, Chinese (Simplified), Tagalog, and Vietnamese
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Jayden Guillen</h1>
+        <p>Email: jaydenmac7@yahoo.com | Phone: 562-566-8717</p>
+        <p>Creative and highly motivated 11th-grade student with a strong passion for education & my hobbies.</p>
+    </header>
+    <div id="google_translate_element" style="text-align: center;"></div>
+   <!-- Dark/Light Mode Toggle -->
+    <div id="mode-toggle" style="text-align: center; margin-top: 20px;">
+        <button id="toggle-dark">Dark Mode</button>
+        <button id="toggle-light" style="display: none;">Light Mode</button>
+    </div>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="edu-item">
+            <p><strong>California School of the Arts</strong> | 2024 - Present</p>
+            <p>Current GPA: 3.8/4.0</p>
+            <button class="toggle-details">Show Courses</button>
+                <ul>
+                    <h3>Algebra 2</h3>
+                    <h3>CCC ITIS 119</h3>
+                    <h3>AP Chemistry</h3>
+                    <h3>Spanish 3</h3>
+                    <h3>Honors LLC3</h3>
+                    <h3>CCC U.S. History</h3>
+                </ul>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-bar">
+        <label>HTML</label>
+        <div class="progress-bar">
+            <div class="progress html"></div>
+        </div>
+    </div>
+    <div class="skill-bar">
+        <label>CSS</label>
+        <div class="progress-bar">
+            <div class="progress css"></div>
+        </div>
+    </div>
+    <div class="skill-bar">
+        <label>JavaScript</label>
+        <div class="progress-bar">
+            <div class="progress js"></div>
+        </div>
+    </div>
+    <div class="skill-bar">
+        <label>JQuery</label>
+        <div class="progress-bar">
+            <div class="progress jq"></div>
+        </div>
+    </div>
+</section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="exp-item">
+            <p><strong>One Semester of CCC ITIS 119</strong> | Csarts Student</p>
+            <button class="toggle-details">Show Details</button>
+            
+            <ul>
+                    <h3>Unit 1: HTML - Structuring Websites</h3>
+                    <h3>Unit 2: CSS - Styling Websites</h3>
+                    <h3>Unit 3: Advanced HTML and CSS</h3>
+                    <h3>Unit 4: Create Your Homepage</h3>
+                    <h3>Unit 5: Introduction to Javascript in HTML</h3>
+                    <h3>Unit 6: Using Javascript Libraries</h3>
+                </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-item">
+            <h3>Personal HomePage Website</h3>
+            <p>A responsive website showcasing personal projects, skills, and achievements.</p>
+            <a href="https://jaydenmac7codehsme-11049617.codehs.me/index.html" target="_blank">View Project</a>
+        </div>
+        <div class="project-item">
+            <h3>Carrer Website</h3>
+            <p>A website that informs about the carrer of graffiti art.</p>
+            (Linked as the "Previous work" website on my "Personal HomePage" project)
+        </div>
+        <h2>Contact Me</h2>
+<section id="contact" class="contact-section">
+    <form id="contact-form" action="send_email.php" method="POST">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+
+        <button type="submit" id="submit-btn">Send Message</button>
+
+        <!-- Success message container -->
+        <div id="form-message" class="form-message" style="display: none;">
+            <p>Thank you for your message! I'll get back to you soon.</p>
+        </div>
+    </form>
+</section>
+<script src="scripts.js"></script>
+</body>
+</html>
